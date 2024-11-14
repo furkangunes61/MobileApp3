@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MobileApp3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MobileApp3"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Ana Sayfa"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"
+        Icon="homepageicon.png"/>
+    <ShellContent
+        Title="Kredi Hesaplama"
+        ContentTemplate="{DataTemplate local:CreditPage}"
+        Route="CreditPage"
+        Icon="crediticon.png"/>
+    <ShellContent
+        Title="Vücut Kitle Endeksi"
+        ContentTemplate="{DataTemplate local:BmiPage}"
+        Route="BmiPage"
+        Icon="bmiicon.png"/>
+    <ShellContent
+        Title="Renk Seçici"
+        ContentTemplate="{DataTemplate local:ColorPage}"
+        Route="ColorPage"
+        Icon="coloricon.png"/>
+        
+    <ShellContent
+        Title="Yapılacaklar Listesi"
+        ContentTemplate="{DataTemplate local:ToDoPage}"
+        Route="ToDoPage"
+        Icon="todolisticon.png"/>
+
+</Shell>
+   

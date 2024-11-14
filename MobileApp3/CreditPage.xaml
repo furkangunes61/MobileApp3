@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MobileApp3.CreditPage"
+             Title="Kredi Hesaplama">
+
+    <Grid Padding="30" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*">
+
+        <!-- Kredi Türü Seçimi -->
+        <Picker x:Name="CreditTypePicker" Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" SelectedIndexChanged="OnCreditTypeChanged" Title="Kredi Türü Seçin">
+        </Picker>
+
+        <!-- Kredi Tutarı Girişi -->
+        <Label Text="Kredi Tutarı (TL):" Grid.Row="2" Grid.Column="0" FontSize="18" />
+        <Entry x:Name="AmountEntry" Grid.Row="2" Grid.Column="1" Placeholder="Kredi tutarını girin" Keyboard="Numeric" />
+
+        <!-- Faiz Oranı Gösterimi -->
+        <Label x:Name="InterestRateLabel" Text="Faiz Oranı (%)" Grid.Row="3" Grid.Column="0" FontSize="18" IsVisible="True"/>
+        <Entry x:Name="InterestRateEntry" Grid.Row="3" Grid.Column="1" FontSize="18" IsReadOnly="True" Text="1.20" />
+
+
+        <!-- Vade Seçimi -->
+        <Label Text="Vade Süresi (Ay):" Grid.Row="4" Grid.Column="0" FontSize="18" />
+        <Entry x:Name="TermEntry" Grid.Row="4" Grid.Column="1" Keyboard="Numeric" IsReadOnly="True" />
+
+        <!-- Vade Slider'ı -->
+        <Slider x:Name="TermSlider" Grid.Row="5" Grid.ColumnSpan="2" Minimum="12" Maximum="60" ValueChanged="OnTermSliderValueChanged" 
+                MinimumTrackColor="Navy"
+                ThumbColor="Navy"/>
+
+        <!-- Hesaplama Butonu -->
+        <Button Text="Hesapla" Grid.Row="6" Grid.ColumnSpan="2" Clicked="OnCalculateButtonClicked" BackgroundColor="Navy" />
+
+        <!-- Sonuçlar -->
+        <Label x:Name="ResultLabel" Grid.Row="7" Grid.ColumnSpan="2" FontSize="20" IsVisible="False" HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>

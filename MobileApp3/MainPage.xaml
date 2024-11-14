@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp3.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image Source="pp.jpg"
+                   WidthRequest="150"
+                   HeightRequest="150"/>
+
+            <Label Text="Furkan Güneş"
+       TextColor="Black"
+       FontSize="24"
+       FontAttributes="Bold"
+       HorizontalTextAlignment="Center"
+       VerticalTextAlignment="Center"/>
+
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği"
+       TextColor="Black"
+       FontSize="24"
+       FontAttributes="Bold"
+       HorizontalTextAlignment="Center"
+       VerticalTextAlignment="Center"/>
+
+            <Label Text="ÖDEV-2"
+        TextColor="Black"
+        FontSize="24"
+        FontAttributes="Bold"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp3.BmiPage"
+             Title="Vücut Kitle Endeksi">
+    <VerticalStackLayout Spacing="10" Padding="20" HorizontalOptions="Center" >
+        <!-- Boy ve Kilo için HorizontalStackLayout kullanarak yan yana yerleştirme -->
+        <Label Text="VKİ Hesaplama" FontSize="25" VerticalOptions="Center" />
+        
+        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+            <Label Text="Boyunuz (cm):" FontSize="18" VerticalOptions="Center" />
+            <Entry x:Name="HeightEntry" WidthRequest="100" Keyboard="Numeric" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+            <Label Text="Kilonuz (kg):" FontSize="18" VerticalOptions="Center" />
+            <Entry x:Name="WeightEntry" WidthRequest="100" Keyboard="Numeric" />
+        </HorizontalStackLayout>
+
+        <Button Text="VKE Hesapla" Clicked="OnCalculateBMIButtonClicked" />
+
+        <Label x:Name="ResultLabel" FontSize="20" IsVisible="False" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

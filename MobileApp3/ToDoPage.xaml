@@ -1,0 +1,33 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MobileApp3.ToDoPage"
+             Title="Yapılacaklar Listesi">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Yapılacaklar Listesi" FontSize="24" HorizontalOptions="Center" />
+
+        <!-- Görev Ekleme Alanı -->
+        <Entry x:Name="TaskEntry" Placeholder="Yeni görev ekle..." />
+        <Button Text="Görev Ekle" Clicked="OnAddTaskClicked" />
+
+        <!-- Yapılacaklar Listesi -->
+        <CollectionView x:Name="TasksListView" ItemsSource="{Binding Tasks}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5" Spacing="10">
+                        <!-- Checkbox Sol Tarafta -->
+                        <CheckBox IsChecked="{Binding IsCompleted}" VerticalOptions="Center" />
+                        <!-- Görev Adı -->
+                        <Label Text="{Binding Task}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+
+                        <!-- Düzenleme ve Silme Butonları Sağda -->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Spacing="10">
+                            <Button Text="Sil" Clicked="OnDeleteTaskClicked"/>
+                            <Button Text="Düzenle" Clicked="OnEditTaskClicked" />
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+
+</ContentPage>
